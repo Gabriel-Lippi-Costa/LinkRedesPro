@@ -63,6 +63,18 @@ section {
     /* Espaçamento interno */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     /* Sombra suave */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .parte-de-cima {
@@ -121,6 +133,7 @@ h3 {
     font-style: normal;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px; /* Melhora a legibilidade */
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .parte-de-baixo button:hover {
@@ -128,4 +141,10 @@ h3 {
     background-color: #0f5581;
     border: 1px solid whitesmoke;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Efeito de levantar */
+}
+
+.parte-de-baixo button:focus {
+    outline: 2px solid #FFA500; /* Destaque ao focar */
+    outline-offset: 2px;
 }
