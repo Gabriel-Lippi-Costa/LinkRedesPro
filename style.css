@@ -1,14 +1,10 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-</style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&family=Quicksand:wght@300..700&display=swap');
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -23,21 +19,12 @@
     background-size: 400% 400%;
     animation: gradientAnimation 10s ease infinite;
     z-index: -1;
-    /* Coloca o fundo atrás do conteúdo */
 }
 
 @keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 main {
@@ -45,95 +32,81 @@ main {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* Centraliza verticalmente */
     padding: 20px;
-    /* Espaçamento para dispositivos móveis */
 }
 
 section {
     margin: 30px auto;
+    max-width: 600px;
     backdrop-filter: blur(10px);
-    /* Aplica o efeito de desfoque */
     background-color: rgba(51, 51, 51, 0.8);
-    /* Fundo semi-transparente escuro */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 15px;
-    /* Bordas arredondadas */
     padding: 20px;
-    /* Espaçamento interno */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    /* Sombra suave */
     animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.parte-de-cima {
-    display: grid;
-
-}
-
-img {
-    margin: 5px auto;
-}
-
-h1,
-h3 {
+h1, h3 {
     text-align: center;
-    margin: 10px 0px;
+    margin: 10px 0;
     color: #209CEE;
 }
 
 h1 {
     font-size: 2.5em;
     font-weight: bold;
+    font-family: "Poppins", sans-serif;
 }
 
 h3 {
-    font-family: "Poppins", serif;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: italic;
-    width: 500px;
+    max-width: 500px;
     font-size: 1em;
     text-align: justify;
     line-height: 1.6;
     text-indent: 20px;
     color: #EAEAEA;
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin: 5px auto;
 }
 
 .parte-de-baixo {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .parte-de-baixo a {
-    margin: 10px auto;
+    text-decoration: none;
 }
 
 .parte-de-baixo button {
-    width: 400px;
+    margin: 20px 0px;
+    width: 100%;
+    width: 300px;
     height: 60px;
     padding: 5px;
     background-color: #209CEE;
     border-radius: 40px;
     border: 1px solid transparent;
     font-size: 1.3em;
-    font-family: "Quicksand", serif;
-    font-optical-sizing: auto;
+    font-family: "Quicksand", sans-serif;
     font-weight: 600;
-    font-style: normal;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    letter-spacing: 1px; /* Melhora a legibilidade */
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .parte-de-baixo button:hover {
@@ -141,10 +114,10 @@ h3 {
     background-color: #0f5581;
     border: 1px solid whitesmoke;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px); /* Efeito de levantar */
+    transform: translateY(-2px);
 }
 
 .parte-de-baixo button:focus {
-    outline: 2px solid #FFA500; /* Destaque ao focar */
+    outline: 2px solid #FFD700;
     outline-offset: 2px;
 }
