@@ -8,10 +8,6 @@
     box-sizing: border-box;
 }
 
-body {
-    height: 500vh;
-}
-
 /* Animação de fundo */
 .background-animation {
     position: fixed;
