@@ -8,23 +8,8 @@
     box-sizing: border-box;
 }
 
-/* Animação de fundo */
-.background-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(135deg, #000000, #4f4f4f, #000000, #4f4f4f);
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite;
-    z-index: -1;
-}
-
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+body {
+    background-color: gray;
 }
 
 main {
